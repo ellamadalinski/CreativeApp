@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController , UITextFieldDelegate{
+class ViewController: UIViewController , UITextFieldDelegate {
     
     
     
@@ -45,6 +45,9 @@ class ViewController: UIViewController , UITextFieldDelegate{
             outcomeLabelOutlet.text = "ERROR-NUM1"
         }
         
+        firstNumberTextFieldOutlet.resignFirstResponder()
+        secondNumberTextFieldOutlet.resignFirstResponder()
+        
     }
     
     
@@ -66,6 +69,10 @@ class ViewController: UIViewController , UITextFieldDelegate{
         else{
             outcomeLabelOutlet.text = "ERROR-NUM1"
         }
+        
+        firstNumberTextFieldOutlet.resignFirstResponder()
+        secondNumberTextFieldOutlet.resignFirstResponder()
+        
     }
     
     
@@ -91,14 +98,18 @@ class ViewController: UIViewController , UITextFieldDelegate{
             outcomeLabelOutlet.text = "ERROR-NUM1"
         }
         
+        firstNumberTextFieldOutlet.resignFirstResponder()
+        secondNumberTextFieldOutlet.resignFirstResponder()
         
-        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            firstNumberTextFieldOutlet.resignFirstResponder()
-            secondNumberTextFieldOutlet.resignFirstResponder()
-            return true
-        }
     }
     
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        firstNumberTextFieldOutlet.resignFirstResponder()
+        secondNumberTextFieldOutlet.resignFirstResponder()
+        return true
+    }
     
     
     
